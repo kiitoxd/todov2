@@ -1,0 +1,120 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-image: url('clay.jpg');
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 100%;
+}
+
+.container {
+  margin-left: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.card {
+  margin: 50px;
+  width: 400px;
+  background-color: white;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  background-color: #007bff;
+  color: white;
+  padding: 0 20px;
+}
+
+.card-header h3 {
+  margin: 0;
+}
+
+.input-group {
+  padding: 20px;
+}
+
+.task-list {
+  padding: 0;
+  list-style: none;
+  margin: 0;
+}
+
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #e6e6e6;
+  transition: background-color 0.3s ease;
+}
+
+.task-item:hover {
+  background-color: #f5f5f5;
+}
+
+.task-item .task-name {
+  flex: 1;
+  color: #333;
+  text-decoration: none;
+}
+
+.task-item .delete-btn {
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.task-item .delete-btn:before {
+  content: "\2212";
+  margin-left: 10px;
+  cursor: pointer;
+  color: #6c757d;
+}
+
+.task-item .delete-btn:hover:before {
+  color: red;
+}
+
+.task-item .delete-btn:focus:before {
+  outline: none;
+  color: red;
+}
+
+.task-item .check-btn {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.task-item .check-btn i:before {
+  content: "\f058";
+  color: #6c757d;
+  font-size: 1.2rem;
+}
+
+.task-item .check-btn.checked i:before {
+  content: "\f00c";
+  color: green;
+}
+
+.task-item.done .task-name {
+  text-decoration: line-through;
+  color: #ccc;
+}
+
+.completed-tasks {
+  margin-left: auto;
+}
+
+.completed-tasks .card-header {
+  background-color: #28a745;
+}
+
+.completed-tasks .card-header h3 {
+  margin-left: auto;
+  margin-top: 50px;
+  color: white;
+}
